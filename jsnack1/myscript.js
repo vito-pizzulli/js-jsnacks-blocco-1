@@ -6,7 +6,6 @@ let numberList = document.querySelector('div.results');
 startButton.addEventListener('click',
     function () {
         numberList.innerHTML = " ";
-
         let totalNumber = 0;
 
         for (let i = 1; i <= 10; i++) {
