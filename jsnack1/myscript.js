@@ -7,10 +7,10 @@ const numberList = document.querySelector('div.container');
 for (let i = 1; i <= 10; i++) {
     let userNumber = parseInt(prompt("Inserisci il " + i + "° numero"));
     if (isNaN(userNumber) || (userNumber < 0)) {
-        numberList.innerHTML += "<p> Il " + [i] + "° numero inserito non è valido.</p>";
+        numberList.innerHTML += "<p> Il " + i + "° numero inserito non è valido.</p>";
         userNumber = 0;
     } else {
-        numberList.innerHTML += "<p> Il " + [i] + "° numero inserito è " + userNumber + ".</p>";
+        numberList.innerHTML += "<p> Il " + i + "° numero inserito è " + userNumber + ".</p>";
     }
     totalNumber += userNumber;
 }
