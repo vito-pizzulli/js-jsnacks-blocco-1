@@ -13,7 +13,9 @@ const guestList = [
 
 const confirmButton = document.querySelector('button');
 confirmButton.addEventListener('click',
+
     function() {
+
         let authorization = false;
         const output = document.getElementById('output');
         const userName = document.getElementById('guestName').value;
@@ -23,6 +25,7 @@ confirmButton.addEventListener('click',
         if (userName.length === 0 || userLastName.length === 0) {
             output.innerHTML = "I campi non possono essere vuoti.";
         } else {
+            
             for (let i = 0; i < guestList.length; i++) {
                 if (userName + " " + userLastName === guestList[i]) {
                     userAuthorized = (userName + " " + userLastName);
@@ -36,4 +39,5 @@ confirmButton.addEventListener('click',
                 output.innerHTML = "Ci dispiace " + userName + " " + userLastName + ", purtroppo non sei in lista e non puoi partecipare alla festa.";
             }
         }
-    })
+    }
+)

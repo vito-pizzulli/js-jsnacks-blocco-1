@@ -4,6 +4,7 @@ const startButton = document.querySelector('button');
 let numberList = document.querySelector('div.results');
 
 startButton.addEventListener('click',
+
     function () {
         numberList.innerHTML = " ";
         let totalNumber = 0;

@@ -4,9 +4,11 @@ const confirmButton = document.querySelector('button');
 
 confirmButton.addEventListener('click',
     function () {
+
         let totalNumber = 0;
         const userNumber = document.getElementById('userNumber').value;
         const output = document.getElementById('output');
+        
         if ((isNaN(userNumber)) || (userNumber < 0)) {
             output.innerHTML = "Hai inserito un valore non valido.";
         } else if (userNumber.length != 4) {

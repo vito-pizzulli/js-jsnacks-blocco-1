@@ -4,12 +4,14 @@ const startButton = document.querySelector('button');
 const oddNumbersList = document.querySelector('div.results');
 
 startButton.addEventListener('click',
+
     function () {
         const oddNumbers = [];
         oddNumbersList.innerHTML = " ";
 
         for (let i = 1; i <= 6; i++) {
             let userNumber = parseInt(prompt("Inserisci il " + i + "° numero"));
+            
             if (isNaN(userNumber)) {
                 oddNumbersList.innerHTML += "<p> Il " + i + "° numero inserito non è valido.</p>";
                 userNumber = 0;
