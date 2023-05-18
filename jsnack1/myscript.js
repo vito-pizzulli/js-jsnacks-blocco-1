@@ -2,15 +2,17 @@
 Il programma stampa la somma di tutti i numeri inseriti. */
 
 let totalNumber = 0;
+const numberList = document.querySelector('div.container');
 
 for (let i = 1; i <= 10; i++) {
     let userNumber = parseInt(prompt("Inserisci il " + i + "° numero"));
-    if (isNaN(userNumber)) {
-        alert("Il " + i + "° numero non ha un valore numerico valido. Verrà convertito in 0.")
+    if (isNaN(userNumber) || (userNumber < 0)) {
+        numberList.innerHTML += "<p> Il " + [i] + "° numero inserito non è valido.</p>";
         userNumber = 0;
+    } else {
+        numberList.innerHTML += "<p> Il " + [i] + "° numero inserito è " + userNumber + ".</p>";
     }
-    console.log(userNumber);
     totalNumber += userNumber;
 }
 
-console.log("La somma dei numeri inseriti è " + totalNumber + ".");
+numberList.innerHTML += "<p> La somma dei numeri inseriti è " + totalNumber + ".</p>";
