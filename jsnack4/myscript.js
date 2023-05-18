@@ -1,5 +1,4 @@
-/* Chiedi un numero di 4 cifre all’utente
-e calcola la somma di tutte le cifre che compongono il numero. */
+/* Chiedi un numero di 4 cifre all’utente e calcola la somma di tutte le cifre che compongono il numero. */
 
 let totalNumber = 0;
 let userNumber = prompt("Inserisci un numero di 4 cifre:");
