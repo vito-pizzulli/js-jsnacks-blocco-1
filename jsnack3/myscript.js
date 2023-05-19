@@ -6,7 +6,7 @@ const oddNumbersList = document.querySelector('div.results');
 startButton.addEventListener('click',
 
     function () {
-        let oddNumbers = [];
+        const oddNumbers = [];
         oddNumbersList.innerHTML = " ";
 
         for (let i = 1; i <= 6; i++) {
@@ -17,7 +17,7 @@ startButton.addEventListener('click',
                 userNumber = 0;
             } else if ((userNumber % 2) != 0) {
                 oddNumbersList.innerHTML += "<p> Il " + i + "° numero inserito è " + userNumber + ".</p>";
-                oddNumbers += userNumber + " ";
+                oddNumbers.push(userNumber);
             } else {
                 oddNumbersList.innerHTML += "<p> Il " + i + "° numero inserito è " + userNumber + ".</p>";
             }
